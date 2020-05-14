@@ -1,0 +1,10 @@
+{
+  "name": "news-alert-lambda",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Nicola Zambello",
+  "license": "MIT",
+  "dependencies": {
+    "rss-parser": "^3.8.0"
+  }
+}

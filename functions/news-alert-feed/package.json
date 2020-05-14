@@ -1,7 +1,7 @@
 {
   "name": "news-alert-lambda",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "news-alert-feed.js",
   "author": "Nicola Zambello",
   "license": "MIT",
   "dependencies": {

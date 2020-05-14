@@ -13,7 +13,7 @@ const rssFeeds = {
 };
 
 exports.handler = async function() {
-  return {
+  const feed = {
     feeds: await Promise.all(
       Object.keys(rssFeeds).map(async key => ({
         [key]: await Promise.all(
@@ -28,5 +28,10 @@ exports.handler = async function() {
         )
       }))
     )
+  };
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify(feed)
   };
 };

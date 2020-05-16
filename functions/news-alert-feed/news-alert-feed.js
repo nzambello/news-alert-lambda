@@ -5,19 +5,19 @@ const parser = new Parser()
 const rssFeeds = {
   ANSA: [
     'https://www.ansa.it/sito/ansait_rss.xml',
-    'https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml',
-    'https://www.ansa.it/sito/notizie/politica/politica_rss.xml',
-    'https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml',
+    // 'https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml',
+    // 'https://www.ansa.it/sito/notizie/politica/politica_rss.xml',
+    // 'https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml',
     'https://www.ansa.it/emiliaromagna/notizie/emiliaromagna_rss.xml',
     'https://www.ansa.it/liguria/notizie/liguria_rss.xml'
   ],
   Repubblica: [
-    'http://www.repubblica.it/rss/homepage/rss2.0.xml',
-    'http://www.repubblica.it/rss/esteri/rss2.0.xml',
-    'http://www.repubblica.it/rss/economia/rss2.0.xml',
-    'http://www.repubblica.it/rss/esteri/rss2.0.xml',
-    'http://www.repubblica.it/rss/solidarieta/rss2.0.xml',
-    'http://www.repubblica.it/rss/ambiente/rss2.0.xml'
+    'http://www.repubblica.it/rss/homepage/rss2.0.xml'
+    // 'http://www.repubblica.it/rss/esteri/rss2.0.xml',
+    // 'http://www.repubblica.it/rss/economia/rss2.0.xml',
+    // 'http://www.repubblica.it/rss/esteri/rss2.0.xml',
+    // 'http://www.repubblica.it/rss/solidarieta/rss2.0.xml',
+    // 'http://www.repubblica.it/rss/ambiente/rss2.0.xml'
   ]
 }
 

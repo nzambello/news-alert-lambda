@@ -6,8 +6,8 @@ const rssFeeds = {
   ANSA: [
     'https://www.ansa.it/sito/ansait_rss.xml',
     // 'https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml',
-    // 'https://www.ansa.it/sito/notizie/politica/politica_rss.xml',
-    // 'https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml',
+    'https://www.ansa.it/sito/notizie/politica/politica_rss.xml',
+    'https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml',
     'https://www.ansa.it/emiliaromagna/notizie/emiliaromagna_rss.xml',
     'https://www.ansa.it/liguria/notizie/liguria_rss.xml'
   ],

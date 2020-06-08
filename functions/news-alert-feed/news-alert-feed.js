@@ -13,7 +13,6 @@ const rssFeeds = {
   "Il Sole 24 Ore": ["https://www.ilsole24ore.com/rss/italia.xml"],
   "Il Giornale": ["https://www.ilgiornale.it/feed.xml"],
   Internazionale: ["https://www.internazionale.it/sitemaps/rss.xml"],
-  "La Stampa": ["http://feed.lastampa.it/Homepage.rss"],
   "Il Manifesto": ["https://ilmanifesto.it/feed/"]
 };
 

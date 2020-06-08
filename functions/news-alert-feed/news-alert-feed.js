@@ -1,29 +1,28 @@
 const Parser = require("rss-parser");
+const qs = require("query-string");
 const uniqBy = require("lodash.uniqby");
 const parser = new Parser();
 
 const rssFeeds = {
   ANSA: [
     "https://www.ansa.it/sito/ansait_rss.xml",
-    // 'https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml',
-    "https://www.ansa.it/sito/notizie/politica/politica_rss.xml",
-    "https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml",
-    "https://www.ansa.it/emiliaromagna/notizie/emiliaromagna_rss.xml",
-    "https://www.ansa.it/liguria/notizie/liguria_rss.xml"
+    "https://www.ansa.it/sito/notizie/politica/politica_rss.xml"
   ],
-  Repubblica: [
-    "http://www.repubblica.it/rss/homepage/rss2.0.xml"
-    // 'http://www.repubblica.it/rss/esteri/rss2.0.xml',
-    // 'http://www.repubblica.it/rss/economia/rss2.0.xml',
-    // 'http://www.repubblica.it/rss/esteri/rss2.0.xml',
-    // 'http://www.repubblica.it/rss/solidarieta/rss2.0.xml',
-    // 'http://www.repubblica.it/rss/ambiente/rss2.0.xml'
-  ]
+  Repubblica: ["http://www.repubblica.it/rss/homepage/rss2.0.xml"],
+  Open: ["https://www.open.online/feed/"],
+  "Il Corriere": ["http://xml2.corriereobjects.it/rss/homepage.xml"],
+  "Il Sole 24 Ore": ["https://www.ilsole24ore.com/rss/italia.xml"],
+  "Il Giornale": ["https://www.ilgiornale.it/feed.xml"],
+  Internazionale: ["https://www.internazionale.it/sitemaps/rss.xml"],
+  "La Stampa": ["http://feed.lastampa.it/Homepage.rss"],
+  "Il Manifesto": ["https://ilmanifesto.it/feed/"]
 };
 
-exports.handler = async function() {
+exports.handler = async function(event) {
+  const sources = Object.keys(rssFeeds);
+  console.log(event);
   const feed = await Promise.all(
-    Object.keys(rssFeeds).map(async key => ({
+    sources.map(async key => ({
       title: key,
       data: uniqBy(
         (

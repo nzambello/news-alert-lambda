@@ -1,5 +1,4 @@
 const Parser = require("rss-parser");
-const qs = require("query-string");
 const uniqBy = require("lodash.uniqby");
 const parser = new Parser();
 
@@ -19,8 +18,15 @@ const rssFeeds = {
 };
 
 exports.handler = async function(event) {
-  const sources = Object.keys(rssFeeds);
-  console.log(event);
+  const sources =
+    event &&
+    event.multiValueQueryStringParameters &&
+    event.multiValueQueryStringParameters.sources
+      ? event.multiValueQueryStringParameters.sources.filter(
+          source => rssFeeds[source]
+        )
+      : Object.keys(rssFeeds);
+
   const feed = await Promise.all(
     sources.map(async key => ({
       title: key,

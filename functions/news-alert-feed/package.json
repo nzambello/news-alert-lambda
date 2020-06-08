@@ -6,7 +6,6 @@
   "license": "MIT",
   "dependencies": {
     "lodash.uniqby": "^4.7.0",
-    "query-string": "^6.13.0",
     "rss-parser": "^3.8.0"
   },
   "scripts": {
